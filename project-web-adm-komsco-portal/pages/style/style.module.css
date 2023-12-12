@@ -1,0 +1,141 @@
+
+  .mainMenu{
+    display: flex;
+    justify-content: space-around;
+    margin-top:50px;
+    margin-bottom: 100px;
+  }
+  .mainMenu div{
+
+    
+  }
+
+  .mainMenu div a{
+    display: flex;
+    padding:0px 20px 0px 20px;
+    width:200px;
+    height: 70px;
+    
+    background: #0040B5;
+    border-radius: 15px;
+    font-size: 16px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
+  .mainMenu div:last-child a{
+    background: #EAEAEA;
+  }
+  .mainMenu div:last-child a div{
+    color:#474D52 ;
+  }
+  .mainMenu div a div{
+    display: flex;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+    line-height: normal;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
+.searchInput{
+    display: flex;
+    height: 110px;
+    /* background: #F3F4F5; */
+    padding: 0px 20px 0px 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+.searchInput input {
+    width :287px;
+    height: 40px;
+    padding-left: 10px;
+    border: 1px solid gray;
+    margin-right: 15px;
+    border-radius: 5px;
+}
+.searchInput button {
+    height: 40px;
+}
+
+  .bl_middleWrap_right_result{
+    display: flex;
+    color: red;
+  }
+
+  .bl_middleWrap_left{
+    padding: 0px !important;
+    display: flex;  
+}
+.bl_middleWrap_left button{
+    border: none;
+    background: blue;
+    color: white;
+    width:120px;
+    height: 35px;
+}
+
+.tabmenuController{
+    display: flex;
+    justify-content: space-between;
+}
+.tabmenuSearch{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin: 15px 0px 25px 0px;
+}
+
+.tabmenuSearch div{
+    display: flex;
+    align-items: center;
+    padding : 0px 10px 0px 10px;
+}
+
+.tabmenuSearch select {
+    border:none;
+    border-left: 1px solid black;
+    font-size: 14px;
+}
+.resultTest{
+    margin-right: 10px;
+}
+
+ .tabmenuSearch .un_pageItemSelect{
+    display: flex;
+}
+.tabContainer{
+}
+
+
+
+
+.tableTab ul{
+    display: flex;
+    margin-bottom:20px;
+}
+
+.tableTab ul li { 
+    background: #eee ;
+}
+.tableTab ul li div{ 
+    display: flex;
+    width: 170px;
+    height: 40px;
+    /* background: #eee; */
+    justify-content: center;
+    align-items: center;
+
+}
+.serchInputRow {
+    display: flex;
+}
+.tabActive{
+   background:#ccc !important ;
+}
+
+.active {
+    background:#C2DFFF;
+}
+

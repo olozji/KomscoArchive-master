@@ -1,0 +1,22 @@
+@import url(./cdn.css);
+@import url(./common.css);
+@import url(./elements.css);
+@import url(./helper.css);
+@import url(./reset.css);
+/* 지역상품권 이용내역 */
+@import url(./usehis.css);
+
+html {
+  font-size: 62.5%;
+  font-family: "NanumSquare", sans-serif;
+}
+* {
+  /* overflow-x scroll; 적용되게 하는 코드 */
+  flex-shrink: 0;
+  /* 웹폰트 깨짐 방지 */
+  /* transform: skew(-0.01deg); */
+  font-family: "NanumSquare", sans-serif;
+}
+body {
+  width: 100%;
+}

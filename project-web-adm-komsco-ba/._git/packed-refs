@@ -1,0 +1,10 @@
+# pack-refs with: peeled fully-peeled sorted 
+378c336a8e8faa9f89ffae07dd9c786a6a8c20ee refs/remotes/origin/develop
+5c2faf6ee18222b3acd63871f1a4b908f1c35d80 refs/remotes/origin/feacher_bsh
+90b0ef0ec521fefcc45ddcb1e51fd5b46308da2a refs/remotes/origin/feature_ejchoi
+5c2faf6ee18222b3acd63871f1a4b908f1c35d80 refs/remotes/origin/feature_gong
+a09fbe4677866d7a2db9ba3da8965811fcab5dc9 refs/remotes/origin/feature_jsy
+aa419f03e7cae3d1e08d113f335f5b576600b326 refs/remotes/origin/feature_khwoo
+d9b7780adf2ac36b20bebaed9c1202cd30dbabf0 refs/remotes/origin/feature_syji
+667cc7f21a1994022245a3fc6301b82e734dd0c0 refs/remotes/origin/main
+5eb012c461c51e28f228940a739eb8dfd3cdcef1 refs/remotes/origin/staging

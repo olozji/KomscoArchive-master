@@ -1,0 +1,55 @@
+      /* ## bl_sideNav */
+      .bl_sideNav {
+        background-color: #0040b5;
+        width: 230px;
+        color: #fff;
+        padding: 10px 12px;
+        font-size: 1.8rem;
+        font-weight: 800;
+        line-height: 2rem;
+        /* height: 100%; */
+      }
+      .bl_sideNav > .item {
+        color: #fff;
+        padding: 16px 0;
+        padding-left: 3px;
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+        border-bottom: 0.5px solid #002f86;
+      }
+      .bl_sideNav > .item.active {
+        color: #fcff79;
+      }
+      .geo_container {
+         width:650px;
+         /*margin:10px 10px;*/
+      }
+      .geo_container .wrapper {
+          width:100%;
+          height:100%;
+          border:1px solid #ddd;
+      }
+      .wrapper .title {
+          width:100%;
+          height:50px;
+          background-color:#ddd;
+          justfy-content:center;
+          vertical-align:middle;
+      }
+      .wrapper .title h1 {
+          text-align:center;
+          line-height:50px;
+          font-size:20px;
+      }
+      .un_pageItemSelect { 
+          margin:10px;
+          padding:5px;
+      }
+      .geo_canvas_div {
+        margin:10px auto;
+        width:500px;
+        height:500px;
+        background-image : url('/public/img/geography.png');
+        background-size : cover;
+      }

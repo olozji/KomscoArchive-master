@@ -1,0 +1,49 @@
+<!-- Typography.stories.mdx -->
+
+import { Meta, Typeset } from '@storybook/addon-docs/blocks';
+
+<Meta title="Typography" />
+
+export const typography = {
+  type: {
+    primary: '"NanumSquare", sans-serif',
+  },
+  weight: {
+    light: '300',
+    regular: '400',
+    bold: '700',
+    extrabold: '800',
+  },
+  size: {
+    s1: 11,
+    s2: 14,
+    s3: 15,
+    s4: 16,
+    m1: 20,
+    l1: 30,
+  },
+};
+
+export const SampleText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
+
+# Typography
+
+**Font:** NanumSquare
+
+**Weights:** 300(light), 400(regular), 700(bold), 800(extrabold)
+
+<Typeset
+  fontSizes={[
+    Number(typography.size.s1),
+    Number(typography.size.s2),
+    Number(typography.size.s3),
+    Number(typography.size.s4),
+    Number(typography.size.m1),
+    Number(typography.size.l1),
+  ]}
+  fontWeight={
+    typography.weight.extrabold
+  }
+  sampleText={SampleText}
+  fontFamily={typography.type.primary}
+/>

@@ -1,0 +1,299 @@
+.cursorPointer {
+    cursor: pointer;
+}
+.commonWrapper{
+    display: flex;
+    width:100%;
+}
+
+.commonWrapper .commonMng{
+    width: 50%;
+    height: 100%;
+}
+
+.menuMngWrapper{
+    width:100%;
+}
+
+.menuContent{
+    border : 1px solid black;
+}
+
+.menuContentTitle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background:#EEEEEE;
+    padding: 10px 10px 10px 10px;
+}
+
+.menuContentsFirstdepts {
+    /* background: #0040b5; */
+    color: white;
+    border:1px solid black;
+}
+
+.menuContentsFirstdepts .firstDepName {
+    background: #0040b5;
+    padding: 10px 10px 10px 10px;
+}
+
+.menuContentsSecdepts {
+    color: white;
+}
+
+.menuContentsSecdepts .secondDepName {
+    background: grey;
+    padding: 10px 10px 10px 20px;
+
+}
+.menuContentsThrdDepts {
+}
+.menuContentsThrdDepts .thrdDepName {
+    background: #eee;
+    color: black;
+    padding: 10px 10px 10px 30px;
+}
+
+
+.mainMenu{
+    display: flex;
+    justify-content: space-around;
+    margin-top:50px;
+    margin-bottom: 100px;
+  }
+  .mainMenu div{
+
+    
+  }
+
+  .mainMenu div a{
+    display: flex;
+    padding:0px 20px 0px 20px;
+    width:200px;
+    height: 70px;
+    
+    background: #0040B5;
+    border-radius: 15px;
+    font-size: 16px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
+  .mainMenu div:last-child a{
+    background: #EAEAEA;
+  }
+  .mainMenu div:last-child a div{
+    color:#474D52 ;
+  }
+  .mainMenu div a div{
+    display: flex;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+    line-height: normal;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
+.bl_middleWrap_right_result{
+    display: flex;
+    color: red;
+}
+
+.bl_middleWrap_left{
+    padding: 0px !important;
+    display: flex;  
+}
+.bl_middleWrap_left button{
+    border: none;
+    background: #0040b5;
+    color: white;
+    width:120px;
+    height: 35px;
+}
+.tabmenuWrapper{
+
+}
+
+.tabmenuWrapper article{
+
+}
+.tabmenuController{
+    display: flex;
+    justify-content: space-between;
+}
+.tabmenuSearch{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin: 15px 0px 25px 0px;
+}
+
+.tabmenuSearch div{
+    display: flex;
+    align-items: center;
+    padding : 0px 10px 0px 10px;
+}
+
+.tabmenuSearch select {
+    border:none;
+    border-left: 1px solid black;
+    font-size: 14px;
+}
+.resultNum{
+    margin-right: 10px;
+}
+
+ .tabmenuSearch .un_pageItemSelect{
+    display: flex;
+}
+.tabContainer{
+}
+.tabMenu{
+    display: flex
+}
+
+.tabMenu li{
+    display: flex;
+    width:200px;
+    height: 40px;
+    justify-content: center;
+    border: 1px solid #A1A1A1;
+    border-bottom: none;;
+    border-radius: 5px 5px 0 0 ;
+    font-size: 14px;
+}
+
+.tabMenu li div {
+    display: flex;
+    align-self: center;
+    
+}
+.active {
+    background:#C2DFFF;
+}
+
+.tableTab ul{
+    display: flex;
+    margin-bottom:20px;
+}
+.tableTab ul li div{ 
+    display: flex;
+    width: 170px;
+    height: 40px;
+    background: #eee;
+    justify-content: center;
+    align-items: center;
+
+}
+.tabActive{
+    background:#ccc !important; 
+ }
+
+/* 검색창 css */
+.searchInput{
+    display: flex;
+    /* height: 110px; */
+    background: #F3F4F5;
+    padding: 20px 20px 20px 20px;
+    align-items: center;
+    /* justify-content: center; */
+}
+.searchInput input {
+    width :250px;
+    height: 40px;
+    padding-left: 10px;
+    border:none;
+    margin-right: 15px;
+    border-radius: 5px;
+}
+.searchInput button {
+    width: 70px;
+    height: 40px;
+    margin-right: 15px;
+}
+
+
+.submitButton{
+
+    text-align: right;
+}
+
+.searchApiInput {
+    display: flex;
+    align-items: center;
+}
+
+.serchInputRowWrapper{
+    display: flex;
+    flex-direction: column;
+    
+}
+.serchInputRow {
+    display: flex;
+    flex:auto;
+
+}
+
+.subButton{
+    margin-left: 15px;
+    background: white !important;
+    color: black !important;
+    border: 1px solid black !important;
+}
+
+
+
+.serchInputRow:last-child{
+    margin-top: 10px;    
+}
+/*  */
+
+
+
+/* 메뉴등록 */
+
+.commonMag{
+    width: 50%;
+    height: 100%;
+padding: 0px 20px 0px 20px;
+    
+}
+.addMenu{
+    width: 100%;
+    border:1px solid black;
+}
+
+.addMenuTitleWrapper{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding:10px 10px;
+}
+
+.addMenuTitle {
+    font-size:16px;
+}
+
+.addMenuButton button:nth-child(1){
+    margin-right:15px;
+    cursor: pointer;
+}
+.addMenuButton button:nth-child(2){
+    background: #0040B5;
+    color: white;
+    cursor: pointer;
+}
+
+.addMenuButton button{
+    width:120px;
+    height: 40px;
+    border: none;
+
+}
+
+.addMenuTableWrapper{
+    padding:10px;
+}

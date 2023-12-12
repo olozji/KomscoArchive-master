@@ -1,0 +1,33 @@
+/* ui */
+.color-guide {
+  padding: 30px;
+  display: flex;
+}
+
+.color-guide ul {
+  flex: 1 0 auto;
+}
+
+.color-guide ul li {
+    display: flex;
+    align-items: center;
+    line-height: 1.5;
+}
+
+.color-guide ul li + li {
+  margin-top: 35px;
+}
+
+.color-guide ul li em {
+  display: block;
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  margin-right: 20px;
+  border: solid #333;
+}
+
+.color-guide ul li p {
+  font-size: 17px;
+  color: #333;
+}

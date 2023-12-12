@@ -1,0 +1,11 @@
+# pack-refs with: peeled fully-peeled sorted 
+842e8a1a71b3eb6797c4495c2e9525d7f196a78a refs/remotes/origin/develop
+bb05753cf2135178825f30cb0a922157d67f0c62 refs/remotes/origin/feature_gong
+842e8a1a71b3eb6797c4495c2e9525d7f196a78a refs/remotes/origin/feature_hjh
+df5029d06bd9704025888cec564224e452204b4a refs/remotes/origin/feature_jyoungwan12
+68aeb80acb7197c05a7d328a580bf50f29b9f13f refs/remotes/origin/feature_khwoo
+619d8100a95c77a93ab26f27e382c6c956787ed5 refs/remotes/origin/feature_minguk
+661664c441ae7a37d3286fa0a9717acd69170c4e refs/remotes/origin/feature_syJeong
+d739b7ee9f4567235c9d68989accdd63ddfc7201 refs/remotes/origin/feature_yhjang
+3a463401d263a553dc2cd17928e6b12c29fba2d7 refs/remotes/origin/main
+fe1bb0deaeef5e6d586e054a8e6ddbd31ca5cc2f refs/remotes/origin/staging

@@ -1,0 +1,45 @@
+.tabmenuWrapper{
+
+}
+
+.tabmenuWrapper article{
+
+}
+.tabmenuController{
+    display: flex;
+    justify-content: space-between;
+}
+.tabmenuSearch{
+    display: flex;
+    justify-content: flex-end;
+}
+.tabContainer{
+}
+.tabMenu{
+    /* width:100%; */
+    /* margin-bottom: 20px; */
+    display: flex
+}
+
+.tabMenu li{
+    display: flex;
+    width:20%;
+    height: 50px;
+    justify-content: center;
+    border: 1px solid black;
+    font-size: 14px;
+}
+
+.tabMenu li div {
+    display: flex;
+    align-self: center;
+    
+}
+.active {
+    background:rgba(0, 0,1, 0.5);
+}
+
+.tabEl{
+    border: 1px solid gray;
+    padding: 15px;
+}

@@ -1,0 +1,32 @@
+/* ## bl_content_filterWrap */
+.intgr_wrap {
+    background-color: #f3f4f5;
+    padding: 25px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .intgr_wrap_bottom {
+    
+  }
+  .bl_content_filterWrap_top {
+      display: flex;
+      flex:1;
+  }
+  .bl_content_filterWrap_top_left{
+      display: flex;
+      flex: 2;
+      align-items: center;
+  }
+  .bl_content_filterWrap_top_right{
+      display: flex;
+      flex: 1;
+      align-items: center;
+  }
+  .bl_content_filterWrap_bottom {
+    display: inline-block;
+  }
+  .intgr_select {
+    max-width: 136px;
+    max-height: 40px;
+  }

@@ -1,0 +1,169 @@
+stages:
+  - build
+  - test
+  - deploy
+
+variables:
+
+  SERVICE_NAME: project-web-adm-komsco-portal
+  DEPLOY_FOLDER_NAME: $CI_PIPELINE_ID-$CI_COMMIT_SHORT_SHA
+
+  # Sonar 정보
+  SONAR_HOST: http://10.10.120.132:9000
+  SONAR_LOGIN: efbd9b3a7bfb43c2a136ae2d84d4e2ac55022c2c
+  JAVA_VERSION: "1.8"
+
+
+  # 개발 서버 정보 - WEB
+  SERVER_DEV_WEB_USER: "advapp001"
+  SERVER_DEV_WEB_IP: "10.10.120.123"
+  SERVER_DEV_WEB_PWD: "Komsco@2022"
+  SERVER_DEV_WEB_PORT: "50022"
+  SERVER_DEV_DEPLOY_PATH: /home/advapp001/service/deploy
+  SERVER_DEV_SOURCE_PATH: /home/advapp001/service/html/admin-portal/public_html
+
+# Develop Test
+test-dev-portal:
+  stage: test
+  tags:
+    - project-web-adm-komsco-portal
+  script:
+    - sonar-scanner
+      -Dsonar.projectKey=$SERVICE_NAME
+      -Dsonar.host.url=$SONAR_HOST
+      -Dsonar.login=$SONAR_LOGIN
+      -Dsonar.sources=./
+      -Dsonar.java.binaries=./
+      -Dsonar.java.source=$JAVA_VERSION
+      -Dsonar.analysis.CI_COMMIT_REF_NAME=$CI_COMMIT_REF_NAME
+      -Dsonar.analysis.GITLAB_USER_EMAIL=$GITLAB_USER_EMAIL
+      -Dsonar.analysis.GITLAB_USER_NAME=$GITLAB_USER_NAME
+      -Dsonar.analysis.CI_PROJECT_PATH=$CI_PROJECT_PATH
+  only:
+    refs:
+      - /develop$/
+
+# Develop Test
+test-dev-portal:
+  stage: test
+  tags:
+    - project-web-adm-komsco-portal
+  script:
+    - sonar-scanner
+      -Dsonar.projectKey=$SERVICE_NAME
+      -Dsonar.host.url=$SONAR_HOST
+      -Dsonar.login=$SONAR_LOGIN
+      -Dsonar.sources=./
+      -Dsonar.java.binaries=./
+      -Dsonar.java.source=$JAVA_VERSION
+      -Dsonar.analysis.CI_COMMIT_REF_NAME=$CI_COMMIT_REF_NAME
+      -Dsonar.analysis.GITLAB_USER_EMAIL=$GITLAB_USER_EMAIL
+      -Dsonar.analysis.GITLAB_USER_NAME=$GITLAB_USER_NAME
+      -Dsonar.analysis.CI_PROJECT_PATH=$CI_PROJECT_PATH
+  only:
+    refs:
+      - /develop$/
+
+# Develop Test
+.test-dev-portal:
+  stage: test
+  tags:
+    - project-web-adm-komsco-portal
+  script:
+    - sonar-scanner
+      -Dsonar.projectKey=$SERVICE_NAME
+      -Dsonar.host.url=$SONAR_HOST
+      -Dsonar.login=$SONAR_LOGIN
+      -Dsonar.sources=./
+      -Dsonar.java.binaries=./
+      -Dsonar.java.source=$JAVA_VERSION
+      -Dsonar.analysis.CI_COMMIT_REF_NAME=$CI_COMMIT_REF_NAME
+      -Dsonar.analysis.GITLAB_USER_EMAIL=$GITLAB_USER_EMAIL
+      -Dsonar.analysis.GITLAB_USER_NAME=$GITLAB_USER_NAME
+      -Dsonar.analysis.CI_PROJECT_PATH=$CI_PROJECT_PATH
+  only:
+    refs:
+      - /develop$/
+
+# Develop Test
+test-dev-portal:
+  stage: test
+  tags:
+    - project-web-adm-komsco-portal
+  script:
+    - sonar-scanner
+      -Dsonar.projectKey=$SERVICE_NAME
+      -Dsonar.host.url=$SONAR_HOST
+      -Dsonar.login=$SONAR_LOGIN
+      -Dsonar.sources=./
+      -Dsonar.java.binaries=./
+      -Dsonar.java.source=$JAVA_VERSION
+      -Dsonar.analysis.CI_COMMIT_REF_NAME=$CI_COMMIT_REF_NAME
+      -Dsonar.analysis.GITLAB_USER_EMAIL=$GITLAB_USER_EMAIL
+      -Dsonar.analysis.GITLAB_USER_NAME=$GITLAB_USER_NAME
+      -Dsonar.analysis.CI_PROJECT_PATH=$CI_PROJECT_PATH
+  only:
+    refs:
+      - /develop$/
+
+# Develop Test
+test-dev-portal:
+  stage: test
+  tags:
+    - project-web-adm-komsco-portal
+  script:
+    - sonar-scanner
+      -Dsonar.projectKey=$SERVICE_NAME
+      -Dsonar.host.url=$SONAR_HOST
+      -Dsonar.login=$SONAR_LOGIN
+      -Dsonar.sources=./
+      -Dsonar.java.binaries=./
+      -Dsonar.java.source=$JAVA_VERSION
+      -Dsonar.analysis.CI_COMMIT_REF_NAME=$CI_COMMIT_REF_NAME
+      -Dsonar.analysis.GITLAB_USER_EMAIL=$GITLAB_USER_EMAIL
+      -Dsonar.analysis.GITLAB_USER_NAME=$GITLAB_USER_NAME
+      -Dsonar.analysis.CI_PROJECT_PATH=$CI_PROJECT_PATH
+  only:
+    refs:
+      - /develop$/
+
+# Develop build
+build-dev-portal:
+  stage: build
+  tags:
+    - project-web-adm-komsco-portal
+  before_script:
+    - pwd
+    - echo "develop"
+  script:
+    - npm install
+    - npm run build-export-development
+  artifacts:
+    paths:
+      - ./
+  only:
+    refs:
+      - /develop$/
+
+# Develop deploy
+deploy-dev-portal:
+  stage: deploy
+  tags:
+    - project-web-adm-komsco-portal
+  before_script:
+    - pwd
+    - echo "develop"
+  script:
+    - mkdir -p $SERVICE_NAME/$DEPLOY_FOLDER_NAME
+    - mv out/* $SERVICE_NAME/$DEPLOY_FOLDER_NAME/
+    - sshpass -p $SERVER_DEV_WEB_PWD scp -r -P $SERVER_DEV_WEB_PORT ./$SERVICE_NAME  $SERVER_DEV_WEB_USER@$SERVER_DEV_WEB_IP:$SERVER_DEV_DEPLOY_PATH
+    - sshpass -p $SERVER_DEV_WEB_PWD ssh -t -t $SERVER_DEV_WEB_USER@$SERVER_DEV_WEB_IP -p $SERVER_DEV_WEB_PORT "
+      cp -r $SERVER_DEV_DEPLOY_PATH/$SERVICE_NAME/$DEPLOY_FOLDER_NAME/* $SERVER_DEV_SOURCE_PATH
+      "
+    - rm -rf $SERVICE_NAME
+  artifacts:
+    paths:
+      - ./
+  only:
+    refs:
+      - /develop$/
